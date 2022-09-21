@@ -47,7 +47,8 @@ export default function RepliedComment({reply, id, setReplies}) {
       }
     })
 
-    const url = 'http://localhost:3000/api/comments/specific-replies';
+    // const url = 'http://localhost:3000/api/comments/specific-replies';
+    const url = 'https://blog-comments-task-vishwaraj.vercel.app/api/comments/specific-replies'
 
     const addComment = async (data) => {
       const sent = {...data, repliedToName: reply.name, arrayId:id}
