@@ -1,0 +1,30 @@
+
+
+.commentsBody {
+    width: 65vw;
+    margin-left: 10rem;
+}
+
+.comment_list {
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.addNewComment {
+    margin-top: 1rem;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+}
+
+.newCommentForm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}

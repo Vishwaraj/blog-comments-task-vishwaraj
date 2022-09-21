@@ -1,0 +1,64 @@
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.name > p {
+    font-weight: bold;
+}
+
+.time {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.upperPortion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.singleCommentBody {
+    width: 43vw;
+    border: 1px solid lightgray;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(249, 249, 249);
+}
+
+.firstComment {
+    margin-left: 2rem;
+}
+
+.firstComment > p {
+    margin-top: 0;
+}
+
+.replyComment {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.replies_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.repliedToName {
+    color:rgb(134, 134, 134);
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0.5rem;
+    font-style: italic;
+}
+
