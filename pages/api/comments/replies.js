@@ -5,10 +5,14 @@ import { ObjectId } from "mongodb";
 
 export default async function handler(req, res) {
 
+    //connecting with DB
     connect();
 
+    //assigning the req to a variable
     const {method} = req;
 
+
+    //multiple checks for the kind of requests
     if(method === 'GET'){
 
         const result = await Comment.find({});
@@ -16,6 +20,7 @@ export default async function handler(req, res) {
         res.status(200).send(result);
     }
     
+    //this is for posting a new comment
     if(method === 'POST'){
         const data = req.body;
         const d = new Date();
@@ -28,7 +33,7 @@ export default async function handler(req, res) {
         res.status(200).send(result);
     }
 
-
+    //this is for adding the replies to a comment
     if(method === 'PUT') {
         const data = JSON.parse(req.body);
         const d = new Date();

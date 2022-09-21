@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
 
+//schema for comments
 const commentSchema = mongoose.Schema({
     name: {
         type: String,

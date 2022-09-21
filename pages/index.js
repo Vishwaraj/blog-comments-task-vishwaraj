@@ -26,6 +26,7 @@ export default function Home({comments}) {
 }
 
 
+//getting server side props and drilling them through components
 export const getServerSideProps = async () => {
      const result = await fetch(API);
      const data = await result.json();

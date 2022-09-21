@@ -8,6 +8,7 @@ import { API } from '../global';
 import { RESPONSE_LIMIT_DEFAULT } from 'next/dist/server/api-utils';
 
 
+//yup comment schema for frontend validation
 const newCommentSchema = yup.object({
   name: yup.string().required('This is a required field'),
   comment: yup.string().required('This is a required field')
@@ -15,8 +16,10 @@ const newCommentSchema = yup.object({
 
 export default function CommentSection({comments}) {
 
+  //state for the added comments
   const [commentState, setCommentState] = useState(comments);
 
+  //styles for MUI components
   const nameStyle ={
     width: '5rem'
   }
@@ -25,8 +28,11 @@ export default function CommentSection({comments}) {
     width: '15rem'
   }
 
+  //state to conditionally render input fields
   const [show, setShow] = useState(false);
 
+
+  //formik code to send our input values
   const {handleChange, handleBlur, handleSubmit, values, errors, touched} = useFormik({
     initialValues: {
       name: '',
@@ -41,6 +47,7 @@ export default function CommentSection({comments}) {
   })
 
 
+  //function to make post request
   const postNewComment = async (comment) => {
 
     try {

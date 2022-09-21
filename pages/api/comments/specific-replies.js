@@ -12,6 +12,8 @@ export default async function handler (req,res) {
         res.status(200).send({msg: 'Hello from the new route'})
     }
 
+
+    //this is specifically for replying to comments that are a reply to the first comment
     if(method === 'PUT'){
         console.log('Its here')
         console.log(req.body);

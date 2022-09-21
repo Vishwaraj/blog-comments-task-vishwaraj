@@ -4,6 +4,7 @@ import AppBar from '@mui/material/AppBar';
 
 export default function Header() {
 
+  //style for MUI components
     const headerStyles ={
        textAlign: 'center',
        backgroundColor: 'black'

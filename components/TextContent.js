@@ -3,7 +3,7 @@ import style from '../styles/TextContent.module.css'
 
 export default function TextContent() {
 
-
+    //hardcoded blog content
     const blog = `<h1>The iPhone 14 is highly capable. Its chipset can handle everything from day-to-day tasks to graphics-intensive gaming. Its cameras are capable of very good photos, and it records the best video clips youll see from any phone in its class. This is all true of the 14, but its also true of the iPhone 13.
     
     The iPhone 14 is a very good phone, with a handful of useful upgrades over the 13. But its a small handful, and that leaves the 14 in a tight spot. The iPhone 13, which came out a year ago and Apple is still selling, is nearly identical to the 14 and $100 cheaper, while the iPhone 14 Pro introduces a lot of interesting new features. And the upcoming iPhone 14 Plus has the same hardware as the 14 but a massive 6.7-inch screen. If the Great iPhone Mini Experiment taught us anything, its that people love big screens. 

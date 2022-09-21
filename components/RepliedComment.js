@@ -9,6 +9,7 @@ import * as yup from 'yup';
 
 
 
+//yup schema for replies
 const commentSchema = yup.object({
     name: yup.string().required('This is a required field.'),
     comment: yup.string().required('This is a required field'),
@@ -20,6 +21,8 @@ export default function RepliedComment({reply, id, setReplies}) {
     const d = new Date();
     const time = d.toLocaleTimeString();
     
+
+    //style for MUI components
     const replyStyle = {
         marginLeft: '2rem',
         height: '2rem'
@@ -33,8 +36,11 @@ export default function RepliedComment({reply, id, setReplies}) {
         width: '8rem'
     }
 
+    //state for conditionally rendering the input fields
     const [show,setShow] = useState(false);
 
+
+    //formik code to send the input values
     const {handleSubmit, handleChange, handleBlur, values, errors, touched} = useFormik({
       initialValues: {
         name: '',
@@ -47,9 +53,14 @@ export default function RepliedComment({reply, id, setReplies}) {
       }
     })
 
+
+    //url to make the reply put request
+
     // const url = 'http://localhost:3000/api/comments/specific-replies';
     const url = 'https://blog-comments-task-vishwaraj.vercel.app/api/comments/specific-replies'
 
+
+    //function to add the reply to that specific comment
     const addComment = async (data) => {
       const sent = {...data, repliedToName: reply.name, arrayId:id}
        try {

@@ -19,10 +19,12 @@ const commentSchema = yup.object({
 
 export default function SingleComment({comm}) {
      
+
+  //state to keep replies in check and re-render everytime a reply adds
   const [replies, setReplies] = useState(comm.replies);
     
   
-
+  //styles for MUI components
     const replyStyle = {
         marginLeft: '2rem',
         height: '2rem'
@@ -38,8 +40,12 @@ export default function SingleComment({comm}) {
         
     }
 
+
+    //state to conditonally render input fields
     const [show,setShow] = useState(false);
 
+
+    //formik code to send the reply value
     const {handleSubmit, handleChange, handleBlur, values, errors, touched} = useFormik({
       initialValues: {
         name: '',
@@ -53,6 +59,7 @@ export default function SingleComment({comm}) {
     })
 
 
+    //function to send the reply value to specific comments
     const addComment = async (data) => {
       const sent = {...data, repliedTo: comm._id, repliedToName: comm.name}
        try {
