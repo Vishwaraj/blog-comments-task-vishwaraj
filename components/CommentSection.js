@@ -71,7 +71,7 @@ export default function CommentSection({comments}) {
         {commentState.map((comm) => {
           return <SingleComment key={comm._id} comm={comm} />
         })}
-        
+          
         </div>
         <div className={style.addNewComment} >
         <Button onClick={()=>setShow(!show)} size='small' variant='outlined'>Write a Comment</Button>
